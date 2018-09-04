@@ -30,8 +30,6 @@ function domReady() {
 
     preloader();
 
-
-
     mobileMenu();
     openSearch();
 

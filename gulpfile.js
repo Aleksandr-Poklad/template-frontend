@@ -43,7 +43,7 @@ var path = {
         img: 'src/assets/img/**/*.*', //Синтаксис img/**/*.* означает - взять все файлы всех расширений из папки и из вложенных каталогов
         fonts: 'src/assets/fonts/**/*.*',
         libs: 'src/libs/**/*.*',
-        pug: 'src/**/*.pug',
+        pug: 'src/pug/*.pug',
     },
     watch: { //Тут мы укажем, за изменением каких файлов мы хотим наблюдать
         html: 'src/**/*.html',
@@ -65,12 +65,12 @@ var config = {
     logPrefix: "Frontend"
 };
 
-gulp.task('html:build', function() {
-    gulp.src(path.src.html) //Выберем файлы по нужному пути
-        .pipe(rigger()) //Прогоним через rigger
-        .pipe(gulp.dest(path.build.html)) //Выплюнем их в папку build
-        .pipe(browserSync.reload({ stream: true })); //И перезагрузим наш сервер для обновлений
-});
+// gulp.task('html:build', function() {
+//     gulp.src(path.src.html) //Выберем файлы по нужному пути
+//         .pipe(rigger()) //Прогоним через rigger
+//         .pipe(gulp.dest(path.build.html)) //Выплюнем их в папку build
+//         .pipe(browserSync.reload({ stream: true })); //И перезагрузим наш сервер для обновлений
+// });
 
 gulp.task('pug', function() {
     gulp.src(path.src.pug)
@@ -168,7 +168,7 @@ gulp.task('fonts:build', function() {
 });
 
 gulp.task('build', [
-    'html:build',
+    // 'html:build',
     'js:build',
     'browserify',
     'style:build',
@@ -179,9 +179,9 @@ gulp.task('build', [
 ]);
 
 gulp.task('watch', function() {
-    watch([path.watch.html], function(event, cb) {
-        gulp.start('html:build');
-    });
+    // watch([path.watch.html], function(event, cb) {
+    //     gulp.start('html:build');
+    // });
     watch([path.watch.pug], function(event, cb) {
         gulp.start('pug');
     });
