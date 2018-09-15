@@ -1,0 +1,54 @@
+header.header
+
+	div.header__top
+		div.container
+			div.bl_left
+				div.header_logo
+					a(href="#") logo
+						//img(src='assets/img/logo.png', alt='logo')
+					div.logo_description Some text
+			div.bl_center
+				a(href='#') Some text
+				a(href='#') Shop
+			form.bl_right
+				div(class="search__input_group_wr search")
+					div.search__input_group
+						input(type="text", placeholder="Search", class="search__input")
+						button.btn_search
+							i.fas.fa-search
+
+	div.header__bottom
+		div.container
+
+			div.menu_wr
+				ul.menu
+					li(class="menu_item active")
+						a(href="#requestSuccess", class="menu__link_hidden __swdOpenPopup") Home
+					li.menu_item
+						a(href="#", class="menu__link_hidden") Home
+					li.menu_item
+						a(href="#", class="menu__link_hidden") Home
+					li.menu_item
+						a(href="#", class="menu__link_hidden") Home
+					li.menu_item
+						a(href="#", class="menu__link_hidden") Home
+					li.menu_item
+						a(href="#", class="menu__link_hidden") Home
+				div.search_mob
+					i(class="fas fa-search")
+				div.burger
+					span
+					span
+					span
+					span
+					span
+					span
+
+	div.bl_search_mob
+		form.search_mob_wr
+			button.btn_search_mob
+				i(class="fas fa-search")
+			div.input_search_wr
+				input(type="text", placeholder="Search")
+			div.btn_close_serch
+				i(class="fas fa-times")

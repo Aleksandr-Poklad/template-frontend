@@ -1,0 +1,155 @@
+.mfp-content
+	padding: 1rem
+
+.mfp-bg
+	background: $color-green
+	opacity: .7
+
+.popup__title
+	flex-basis: 100%
+	text-align: center
+	font-size: 1.2rem
+	color: #2e2f2f
+	margin-bottom: 30px
+
+.popup
+	position: relative
+
+	&_form
+		background: #fff
+		width: 100%
+		max-width: 770px
+		margin: auto
+
+		.mfp-close
+			position: absolute
+			right: 20px
+			top: 20px
+			color: #389aeb
+
+			&:before
+				content: '\f00d'
+				font-family: $font-awesome
+				font-weight: 600
+
+	&__success
+		border: 3px $color-green solid
+		width: 100%
+		max-width: 624px
+		margin: auto
+		padding: 30px 40px 30px
+		display: flex
+		flex-direction: column
+		align-items: center
+		text-align: center
+		// background: #fff url(../img/bg_popup_success.png) 98% 65% no-repeat
+
+		.popup__in
+			display: flex
+			flex-direction: column
+			align-items: center
+			width: 100%
+
+		.popup__title
+			flex-basis: auto
+			align-self: flex-start
+			color: $color-green
+			font-size: 30px
+			font-family: 'Roundedmplus1c-bold'
+			margin-bottom: 10px
+		.caption
+			align-self: flex-start
+			font-size: 20px
+			font-family: "Roundedmplus1c-light"
+
+		img
+			margin: 50px 0 60px
+
+	&__coocie
+		border: 3px #f89912 solid
+		width: 100%
+		max-width: 260px
+		margin: auto
+		padding: 20px
+		display: flex
+		flex-direction: column
+		align-items: center
+		text-align: center
+
+		.popup__in
+			display: flex
+			flex-direction: column
+			align-items: center
+			width: 100%
+
+		.popup__title
+			text-transform: uppercase
+			flex-basis: auto
+			font-size: 16px
+			font-family: 'Roundedmplus1c-medium'
+			margin-bottom: 10px
+		.caption
+			padding-left: 8px
+			align-self: flex-start
+			text-align: left
+			font-size: 12px
+			font-family: "Roundedmplus1c-light"
+			margin-bottom: 20px
+
+		img
+			max-width: 100px
+			margin: 10px 0 20px
+		.btn_wr
+			width: 100%
+			display: flex
+			align-items: center
+			justify-content: space-between
+			span
+				font-size: 12px
+				color: #939393
+				text-transform: uppercase
+
+	&__error
+		border-radius: 30px
+		border: 5px #f56666 solid
+		width: 100%
+		max-width: 770px
+		margin: auto
+		padding: 50px 15px 30px
+		display: flex
+		flex-direction: column
+		align-items: center
+		text-align: center
+		background: #fff url(../img/bg_popup_error.png) 95% 95% no-repeat
+
+		.popup__in
+			display: flex
+			flex-direction: column
+			align-items: center
+
+		.popup__title
+			color: #f56666
+			font-size: 2rem
+			text-transform: uppercase
+			margin-bottom: 15px
+
+		img
+			margin: 60px 0 40px
+
+.mfp-iframe-holder
+	.mfp-close
+		position: absolute
+		right: -30px
+		top: -30px
+		color: #fff
+		background: none
+		border: none
+		box-shadow: none
+		font-size: 1.5rem
+		cursor: pointer
+		transition: opacity .3s
+		outline: none
+
+		&:hover
+			opacity: .7
+

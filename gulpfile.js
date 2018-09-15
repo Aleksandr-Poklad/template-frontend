@@ -19,9 +19,8 @@ var gulp = require('gulp'),
     browserify = require('browserify'),
     babel = require('babelify'),
     vinylSourceStream = require('vinyl-source-stream'),
-    es = require('event-stream');
-
-// notify = require("gulp-notify"),
+    es = require('event-stream'),
+    notify = require("gulp-notify");
 // eslint = require('gulp-eslint'),
 // $ = require('gulp-load-plugins')();
 
@@ -43,7 +42,8 @@ var path = {
         img: 'src/assets/img/**/*.*', //Синтаксис img/**/*.* означает - взять все файлы всех расширений из папки и из вложенных каталогов
         fonts: 'src/assets/fonts/**/*.*',
         libs: 'src/libs/**/*.*',
-        pug: 'src/pug/*.pug',
+        pug: ['src/pug/*.pug', 'src/pug/pages/*.pug'],
+
     },
     watch: { //Тут мы укажем, за изменением каких файлов мы хотим наблюдать
         html: 'src/**/*.html',
@@ -76,7 +76,10 @@ gulp.task('pug', function() {
     gulp.src(path.src.pug)
         .pipe(pug({
             pretty: true
-        }))
+        }).on("error", notify.onError({
+	        message: "Error: <%= error.message %>",
+	        title: "Pug error"
+        })))
         .pipe(gulp.dest(path.build.pug))
         .pipe(browserSync.reload({ stream: true }));
 });
@@ -149,7 +152,10 @@ gulp.task('image:build', function() {
 gulp.task('style:build', function() {
     gulp.src(path.src.style) //Выберем наш main.scss
         .pipe(sourcemaps.init()) //То же самое что и с js
-        .pipe(sass()) //Скомпилируем
+        .pipe(sass().on("error", notify.onError({
+	        message: "Error: <%= error.message %>",
+	        title: "Sass error"
+        }))) //Скомпилируем
         .pipe(prefixer(['last 4 versions'])) //Добавим вендорные префиксы
         .pipe(cleanCSS())
         .pipe(sourcemaps.write())

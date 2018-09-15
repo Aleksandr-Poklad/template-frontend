@@ -5,8 +5,8 @@
 	position: relative
 	z-index: 1010
 	&__top
-		height: 54px
-		background-color: $color-darkBlue
+		height: 80px
+		background-color: #f4f4f4
 		font-size: 13px
 		.container
 			height: 100%
@@ -15,93 +15,53 @@
 			align-items: center
 		.bl_left
 			display: flex
-			flex: 1 0 50%
-			flex-basis: 50%
-			width: 50%
-			.mail
-				display: flex
-				align-items: center
-				color: #ffffff
-				font-weight: 300
-				margin-left: 44px
-				transition: color .3s
-				i
-					font-size: 18px
-					margin-right: 5px
-				&:hover 
-					color: #78a5e9
-
+			.header_logo
+				padding-left: 10px
+				a
+					display: inline-block
+					width: 100%
+					min-height: 20px
+					position: relative
+				.logo_description
+					line-height: 1
+					margin-top: -5px
+					font-size: 12px
+					letter-spacing: 0.5px
+					color: #1b2439
+					font-family: "Intro-Black"
+		.bl_center
+			display: flex
+			margin-top: 3px
+			margin-left: -11px
+			a
+				font-size: 16px
+				font-family: 'Roundedmplus1c-extrabold'
+				margin: 0 15px
+				letter-spacing: 0.4px
+				&:last-child
+					margin-left: 50px
 		.bl_right
 			display: flex
-			flex: 1 0 50%
-			flex-basis: 50%
-			width: 50%	
 			align-items: center
-			justify-content: space-between			
-			.btn_registr_wr
-				position: relative
-				display: flex
-				justify-content: center
-				.logout
-					color: #fff
-					min-width: 60px
-					border: 1px solid #fff
-					border-radius: 5px
-					height: 30px
-					width: 80px
-					display: flex
-					transition: border .3s, background-color .3s
-					align-items: center
-					justify-content: center
-					&:before
-						font-family: $font-awesome
-						content: '\f2f5'
-						font-weight: 900
-						padding-right: 8px
-					&:hover
-						border: 1px solid $color-blue
-						background-color: $color-blue
-			.header_cart_mob_wr
-				display: none
-				position: relative
-				.header_cart
-					position: relative
-					z-index: 1
-					img 
-						max-width: 22px
-						padding-top: 7px
-				&:before
-					top: 50%
-					left: 50%
-					transform: translate(-50%, -50%)
-					position: absolute
-					content: ''
-					display: inline-block
-					width: 35px
-					height: 35px
-					border-radius: 50%
-					background-color: $color-blue
-					// z-index: -1
-
+			justify-content: space-between
 			.search__input_group_wr
 				height: 32px
-				width: 242px
+				width: 287px
 				display: flex
 				align-items: center
-				margin-left: 47px
 				.search__input_group
 					color: #fff
-					background: rgba(#fff, .32)
+					background: $color-green
 					display: flex
 					align-items: center
 					height: 32px
 					width: 100%
-					border-radius: 5px
 					position: relative
 					padding-right: 40px
 					.btn_search
 						position: absolute
 						right: 0
+						color: #fff
 						top: 0
 						height: 100%
 						border: none
@@ -116,7 +76,7 @@
 						font-size: 12px
 						width: 100%
 						font-weight: 300
-						padding-left: 18px
+						padding-left: 14px
 						color: #fff
 						height: 100%
 						&::-webkit-input-placeholder
@@ -131,224 +91,57 @@
 						&:-ms-input-placeholder
 							color: #fff
 							opacity: .8
-			.center_wr
-				padding: 0 10px
-				margin-left: 12px
-				display: flex
-				justify-content: space-between
-				align-items: center
-				.btn_wishlist
-					color: #fff
-					margin-right: 15px
-					transition: color .3s
-					&:hover 
-						color: #78a5e9
-				
-				.lang
-					display: flex
-					align-items: center
-					margin-left: 20px
-					z-index: 10
-					height: 30px
-					position: relative
-					text-transform: uppercase
-					&:hover
-						.list-hidden
-							opacity: 1
-							transform: scale(1)
 
-					.visibility
-						color: #fff
-						display: flex
-						align-items: center
-						justify-content: space-between
-						height: 100%
-						min-width: 72px
-						&:after
-							content: '\f107'
-							font-family: $font-awesome
-							font-weight: 600
-
-					.list-hidden
-						position: absolute
-						left: 0
-						top: 100%
-						list-style: none
-						background: #fff
-						width: calc(100% + 15px)
-						transform: scale(0)
-						transform-origin: 0 0
-						opacity: 0
-						transition: transform .3s, opacity .3s
-						border: 1px solid $color-blue
-						padding: 0 10px
-						a
-							display: flex
-							justify-content: space-between
-							align-items: center
-							width: 100%
-							line-height: 30px
-							height: 30px
-							color: #000
-							white-space: nowrap
-				.currency
-					.visibility
-						min-width: 68px
 	&__bottom
-		height: 90px
+		background-color: $color-default
+		height: 54px
 		position: relative
 		.container
 			height: 100%
 			display: flex
 			justify-content: space-between
 			align-items: center
-			.header_logo
-				flex-basis: 250px
-				a 
-					display: inline-block
-					width: 100%
-					min-height: 20px
-					position: relative
-				.logo_description
-					font-size: 12px
-					font-weight: 300
-					color: #1b2439
-					
-
-			
-			.header_cart_wr
-				display: flex
-				align-items: center
-				.header_cart
-					font-size: 16px
-					padding: 5px 0 3px 12px
-					border-radius: 2px
-					letter-spacing: 0.48px
-					position: relative
-					.quantity
-						position: absolute
-						top: 3px
-						left: 3px
-						display: flex 
-						justify-content: center
-						align-items: center
-						width: 14px
-						height: 14px
-						border-radius: 50%
-						background-color: #6b91cc
-						font-size: 10px
-						color: #fff
-
-				.summ_cash
-					font-size: 12.5px
-					margin-left: 10px
-					color: #504f4f
-					font-weight: 600
 
 	.menu_wr
 		height: 100%
-		margin-left: -65px
+		display: flex
+		width: 100%
 		.search_mob
 			position: absolute
-			top: 34px
+			top: 18px
 			right: 80px
 			display: none
-			i 
-				color: #78a5e9
+			i
+				color: #fff
 		.menu
+			width: 100%
 			display: flex
-			justify-content: center
+			justify-content: space-between
 			align-items: center
 			height: 100%
 			.menu_item
-				font-size: 16px
-				text-transform: uppercase
 				height: 100%
-				transition: transform .3s
-				margin-left: -0.5px
-				margin-right: -0.5px
 				position: relative
-				a 
+				a
 					display: flex
 					justify-content: center
 					align-items: center
 					letter-spacing: 0.3px
 					height: 100%
-					padding: 0 29px
-					color: #1b2439
-					transition: color .3s
-				&:hover
-					background-color: $color-blue
-					a
-						color: #fff
-				.menu__hidden
-					z-index: 1000
-					position: absolute
-					top: 100%
-					left: 0
-					transform: scale(0)
-					transform-origin: 0 0
-					background: #fff
-					display: flex
-					transition-delay: 0.2s
-					width: auto
-					max-width: 424px
-					padding: 18px 0
-					text-transform: none
-					flex-direction: column
-					align-items: flex-start
-					opacity: 0
-					transition: transform .3s, opacity .3s
-					border: 0.25px solid $color-blue
-					.menu__item
-						width: 100%
-						position: relative
-						&:hover 
-							background-color: $color-blue
-						.menu__link_hidden
-							justify-content: flex-start
-							padding: 0 24px 0 18px
-							font-size: 14px
-							white-space: nowrap
-							height: 32px
-							position: relative
-							&:after
-								position: absolute
-								right: 10px
-								top: 50%
-								transform: translateY(-50%)
-								content: '\f2fb'
-								font: $font-material
-								color: $color-darkBlue
-								transition: color .3s, max-width .3s
-
-						.submenu__hidden
-							transform: scale(0)
-							transform-origin: 0 0
-							transition: transform .3s, opacity .3s
-							position: absolute
-							opacity: 0
-							max-width: 260px
-							background-color: #fff
-							top: 0
-							left: 100%
-							border: 0.25px solid $color-blue
-							.submenu__item
-								.submenu__link_hidden
-									white-space: nowrap
-									justify-content: flex-start
-									font-size: 14px
-									height: 32px
-
-						
-			.menu_item.active
-				background-color: $color-blue
-				a
 					color: #fff
+					transition: color .3s
+					font-family: 'Roundedmplus1c-bold'
+				&:hover
+					a
+						color: $color-green
+			.menu_item.active
+				a
+					color: $color-green
 
 	.bl_search_mob
+
 		position: fixed
-		top: 54px
+		top: 80px
 		left: 0
 		width: 100%
 		height: 100%
@@ -356,7 +149,7 @@
 		display: flex
 		transform: translateX(100%)
 		transition: transform .3s
-		&:before 
+		&:before
 			content: ''
 			position: absolute
 			top: 0
@@ -364,10 +157,9 @@
 			width: 100%
 			height: 100%
 			z-index: 101
-			background: #f4f5f7
+			background: $color-default
 		.search_mob_wr
-			
-			background: #fff
+			background: $color-green
 			display: flex
 			position: absolute
 			z-index: 101
@@ -378,17 +170,35 @@
 			cursor: pointer
 			.btn_search_mob
 				flex: 0 0 50px
+				background: transparent
+				border: none
+				outline: none
 				padding-left: 5px
 				padding-top: 2px
 				display: flex
 				align-items: center
 				justify-content: center
+				color: #fff
 			.input_search_wr
 				display: flex
 				flex: 1 0 auto
-				input 
+				input
 					width: 100%
+					color: #fff
+					&::-webkit-input-placeholder
+						color: #fff
+						opacity: .8
+					&:-moz-placeholder
+						color: #fff
+						opacity: .8
+					&::-moz-placeholder
+						color: #fff
+						opacity: .8
+					&:-ms-input-placeholder
+						color: #fff
+						opacity: .8
 			.btn_close_serch
+				color: #fff
 				cursor: pointer
 				flex: 0 0 50px
 				padding-right: 20px
@@ -397,14 +207,11 @@
 				justify-content: flex-end
 	.open_search
 		transform: translateX(0)
-			
-      		
-
 
 @keyframes anim_opacity
 	0%
 		opacity: 0
-	100% 
+	100%
 		opacity: 1
 
 .burger
@@ -420,7 +227,7 @@
 	transition: .5s ease-in-out
 	cursor: pointer
 	position: absolute
-	top: 34px
+	top: 18px
 	right: 15px
 	display: none
 	z-index: 100
@@ -430,7 +237,7 @@
 		position: absolute
 		height: 3px
 		width: 50%
-		background: #6b91cc
+		background: #fff
 		opacity: 1
 		-webkit-transform: rotate(0deg)
 		-moz-transform: rotate(0deg)
@@ -459,45 +266,44 @@
 			top: 18px
 
 .menu_wr
-  &.open
-    z-index: 99
-    .burger
-      span
-        // background: #000
+	&.open
+		z-index: 99
+		.burger
+			span
+				// background: #000
 
-        &:nth-child(1), &:nth-child(6)
-          -webkit-transform: rotate(45deg)
-          -moz-transform: rotate(45deg)
-          -o-transform: rotate(45deg)
-          transform: rotate(45deg)
+				&:nth-child(1), &:nth-child(6)
+					-webkit-transform: rotate(45deg)
+					-moz-transform: rotate(45deg)
+					-o-transform: rotate(45deg)
+					transform: rotate(45deg)
 
+				&:nth-child(2), &:nth-child(5)
+					-webkit-transform: rotate(-45deg)
+					-moz-transform: rotate(-45deg)
+					-o-transform: rotate(-45deg)
+					transform: rotate(-45deg)
 
-        &:nth-child(2), &:nth-child(5)
-          -webkit-transform: rotate(-45deg)
-          -moz-transform: rotate(-45deg)
-          -o-transform: rotate(-45deg)
-          transform: rotate(-45deg)
+				&:nth-child(1)
+					left: 5px
+					top: 7px
 
-        &:nth-child(1)
-          left: 5px
-          top: 7px
+				&:nth-child(2)
+					left: calc(50% - 5px)
+					top: 7px
 
-        &:nth-child(2)
-          left: calc(50% - 5px)
-          top: 7px
+				&:nth-child(3)
+					left: -50%
+					opacity: 0
 
-        &:nth-child(3)
-          left: -50%
-          opacity: 0
+				&:nth-child(4)
+					left: 100%
+					opacity: 0
 
-        &:nth-child(4)
-          left: 100%
-          opacity: 0
+				&:nth-child(5)
+					left: 5px
+					top: 12px
 
-        &:nth-child(5)
-          left: 5px
-          top: 12px
-
-        &:nth-child(6)
-          left: calc(50% - 5px)
-          top: 12px
+				&:nth-child(6)
+					left: calc(50% - 5px)
+					top: 12px
