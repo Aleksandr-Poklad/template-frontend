@@ -102,7 +102,10 @@ gulp.task('browserify', function() {
                 debug: true
             })
             .transform(babel)
-            .bundle()
+            .bundle().on("error", notify.onError({
+		        message: "Error: <%= error.message %>",
+		        title: "Js error"
+	        }))
 
         // .pipe(notify("Found file: <%= file.relative %>!"))
 

@@ -15,9 +15,7 @@ if (window.Element && !Element.prototype.closest) {
 }
 
 
-document.addEventListener("DOMContentLoaded", function () {
-	domReady();
-});
+document.addEventListener("DOMContentLoaded", domReady);
 
 function domReady() {
 
@@ -30,13 +28,16 @@ function domReady() {
 	// });
 
 
+
+
 	preloader();
 
 	mobileMenu();
 	openSearch();
 
 	paddingBody();
-	accordeon_terms();
+	accordeonTerms();
+
 	addAnimation();
 	initPopupOnClassOpen();
 
@@ -100,17 +101,17 @@ function scroll() {
 }
 //end animation and scroll
 
-//begin accordeon_terms
-function accordeon_terms() {
+//begin accordeonTerms
+function accordeonTerms() {
 	$("#accord_term .hidden_content").hide().prev().click(function () {
 		$(this).parents("#accord_term").find(".hidden_content").not(this).slideUp().parent().removeClass("show_content");
 		$(this).next().not(":visible").slideDown().parent().addClass("show_content");
 	});
 }
-//end accordeon_terms
+//end accordeonTerms
 
 
-let paddingBody = () => {
+const paddingBody = () => {
 	let menu = document.querySelector('.header_manu_fixed');
 	if (menu) {
 		document.body.style.paddingTop = menu.offsetHeight + 'px';
@@ -118,7 +119,7 @@ let paddingBody = () => {
 };
 
 //begin mobileMenu
-function mobileMenu() {
+const mobileMenu = () => {
 	let burger = document.querySelector('.header .burger');
 	let body = document.querySelector('body');
 
@@ -127,12 +128,12 @@ function mobileMenu() {
 		body.classList.toggle('no_scroll');
 	});
 
-}
+};
 
 //end mobileMenu
 
 //begin openSearch
-function openSearch() {
+const openSearch = () => {
 	let mobSearch = document.querySelector('.search_mob'),
 		blSearch = document.querySelector('.bl_search_mob'),
 		close = document.querySelector('.btn_close_serch'),
@@ -146,13 +147,13 @@ function openSearch() {
 		blSearch.classList.remove('open_search');
 		body.classList.remove('no_scroll');
 	});
-}
+};
 
 //end openSearch
 
 
 //begin preloader
-function preloader() {
+const preloader = () => {
 	let elem = document.querySelector('.preloader');
 
 	elem.classList.add('hide');
@@ -160,8 +161,7 @@ function preloader() {
 	setTimeout(function () {
 		elem.style.display = 'none';
 	}, 500)
-}
-
+};
 //end preloader
 
 

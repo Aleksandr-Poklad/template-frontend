@@ -1,0 +1,110 @@
+.bl_post_wr
+	.privacy_wr
+		margin-right: 35px
+.privacy
+	border: 1px solid #a3e6e6
+	margin: 29px 0
+	.terms_content_wr
+		background: #fff
+		padding: 25px
+		h3
+			font-size: 18px
+			letter-spacing: 0.6px
+			font-family: "Roundedmplus1c-black"
+			margin-bottom: 18px
+		p
+			margin-bottom: 22px
+			line-height: 1.6
+			letter-spacing: 0.7px
+		.accord
+			padding-top: 9px
+		.content_wr_cond
+			margin-bottom: 15px
+			border: 1px solid #e1e1e1
+			transition: all .3s linear
+			&:last-child
+				margin-bottom: 0
+			h5
+				padding: 10px 50px 10px 20px
+				letter-spacing: 0.7px
+				font-family: "Roundedmplus1c-bold"
+				font-size: 16px
+				cursor: pointer
+				z-index: 3
+				position: relative
+				&:before
+					content: ''
+					position: absolute
+					right: 15px
+					top: 50%
+					transform: translateY(-50%)
+					display: inline-block
+					width: 30px
+					height: 30px
+					border: 1px solid #e1e1e1
+					border-radius: 50%
+					background: #fff
+				&:after
+					content: '\f067'
+					font-family: $font-awesome
+					font-weight: 900
+					position: absolute
+					right: 24.5px
+					top: 0
+					display: flex
+					height: 100%
+					align-items: center
+					font-size: 12px
+					color: #a3e6e6
+			.hidden_content
+				padding: 15px
+				h6
+					font-size: 14px
+					font-weight: 700
+					text-transform: uppercase
+				p
+					font-weight: 400
+					//text-align: justify
+					margin: 0 0 15px
+					a
+						color: #a3e6e6
+						transition: all .3s ease-in-out
+						&:hover
+							color: $color-green
+							transition: all .3s ease-in-out
+				.list_dot
+					padding-left: 0
+					li
+						margin-bottom: 25px
+						&:before
+							padding-right: 5px
+							position: static
+				.left_line
+					margin-top: 15px
+					font-size: 16px
+					position: relative
+					padding-left: 10px
+					margin-left: 8px
+					max-width: 560px
+					&:before
+						position: absolute
+						content: ''
+						top: 0
+						left: 0
+						display: inline-block
+						width: 2px
+						height: 100%
+						background-color: #a3e6e6
+				.contacts_block
+					padding-left: 40px
+		.show_content
+			border: 1px solid #a3e6e6
+			transition: all .3s linear
+			h5
+				&:after
+					content: '\f068'
+					font-family: $font-awesome
+					font-weight: 900
+					right: 24.5px
+					top: 0
+					font-size: 12px
